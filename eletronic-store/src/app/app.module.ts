@@ -20,6 +20,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { CartComponent } from './cart/cart.component';
 import { SubTotalPipe } from './sub-total.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const matDesignModules = [MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatSelectModule, MatDialogModule, MatBadgeModule, MatSnackBarModule];
 
@@ -37,7 +39,8 @@ const matDesignModules = [MatToolbarModule, MatButtonModule, MatSidenavModule, M
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    ...matDesignModules
+    ...matDesignModules,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
