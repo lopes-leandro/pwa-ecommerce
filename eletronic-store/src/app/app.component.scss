@@ -1,0 +1,17 @@
+.product-card {
+  max-width: 220px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card mat-card-actions {
+  margin-top: auto;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
