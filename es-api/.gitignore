@@ -3,7 +3,9 @@
 /node_modules
 
 # Environments
-development.env
+.develop.env
+.hml.env
+.prod.env
 
 # Logs
 logs

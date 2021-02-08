@@ -7,7 +7,9 @@ import { ProductsModule } from './products/products.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: ['.development.env']
+      envFilePath: './.develop.env',
+      ignoreEnvFile: true,
+      isGlobal: true,
     }),
     ProductsModule],
   controllers: [AppController],
