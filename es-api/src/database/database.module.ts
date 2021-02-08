@@ -5,7 +5,7 @@ const DATABASE_PROVIDER = {
     provide: 'DbConnectionToken',
     useFactory: async (): Promise<typeof mongoose> =>
     await mongoose.connect(
-      `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PWS}@${process.env.DATABASE_URL}.mongodb.net/${process.env.DATABASE_NAME}`,
+      `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PWS}@${process.env.DATABASE_URL}.mongodb.net/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`,
       {
           useNewUrlParser: true,
           useUnifiedTopology: true,
