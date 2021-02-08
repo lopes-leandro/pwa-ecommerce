@@ -1,0 +1,4 @@
+es-api/.develop.env
+es-api/.hml.env
+es-api/.prod.env
+eletronic-store/.vercel
