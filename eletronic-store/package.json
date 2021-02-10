@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:vercel":"npx vercel --prod",
+    "build:vercel": "npx vercel --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
