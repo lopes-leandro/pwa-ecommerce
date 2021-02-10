@@ -1,0 +1,17 @@
+.content-spinner {
+    background-color: rgba($color: #4443438a, $alpha: .9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.content-spinner h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}

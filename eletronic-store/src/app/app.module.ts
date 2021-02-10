@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,13 +18,27 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+import { environment } from '../environments/environment';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 import { CartComponent } from './cart/cart.component';
 import { SubTotalPipe } from './sub-total.pipe';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 
-const matDesignModules = [MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatSelectModule, MatDialogModule, MatBadgeModule, MatSnackBarModule];
+
+const matDesignModules = [
+  MatToolbarModule, 
+  MatButtonModule, 
+  MatSidenavModule, 
+  MatIconModule, 
+  MatListModule, 
+  MatCardModule, 
+  MatSelectModule, 
+  MatDialogModule, 
+  MatBadgeModule, 
+  MatSnackBarModule,
+  MatProgressSpinnerModule];
 
 @NgModule({
   declarations: [
@@ -31,7 +46,8 @@ const matDesignModules = [MatToolbarModule, MatButtonModule, MatSidenavModule, M
     NavComponent,
     AddToCartComponent,
     CartComponent,
-    SubTotalPipe
+    SubTotalPipe,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
