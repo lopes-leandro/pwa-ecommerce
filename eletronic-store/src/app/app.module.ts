@@ -22,7 +22,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { environment } from '../environments/environment';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
-import { SpinnerComponent } from './spinner/spinner.component';
 import { CartComponent } from './cart/cart.component';
 import { SubTotalPipe } from './sub-total.pipe';
 
@@ -47,7 +46,6 @@ const matDesignModules = [
     AddToCartComponent,
     CartComponent,
     SubTotalPipe,
-    SpinnerComponent
   ],
   imports: [
     BrowserModule,

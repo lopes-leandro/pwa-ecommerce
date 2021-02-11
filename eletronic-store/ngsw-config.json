@@ -46,7 +46,7 @@
         "maxAge": "3d",
         "maxSize": 50,
         "strategy": "freshness",
-        "timeout": 1000
+        "timeout": "1000s"
       },
       "urls": ["https://api-eletronic.herokuapp.com/"]
     }

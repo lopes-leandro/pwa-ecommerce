@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CartComponent } from './cart/cart.component';
 import { ProductsService } from './products.service';
-import { SpinnerService } from './spinner/spinner.service';
 import { CartService } from './cart.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -23,16 +22,13 @@ export class AppComponent implements OnInit {
     private productsService: ProductsService,
     private cartService: CartService,
     private dialog: MatDialog,
-    private spinnerService: SpinnerService,
     update: SwUpdate,
     private snackBar: MatSnackBar) {
-    this.spinnerService.setSpinnerEnable(true);
     this.products$ = this.productsService.getProducts();
     this.cart$ = this.cartService.cart$.subscribe(cart => this.cart = cart);
-    this.spinnerService.setSpinnerEnable(false);
 
     update.available.subscribe(event => {
-      this.snackBar.open('Nova atualização disponível', 'Instale Agora', {
+      this.snackBar.open('Nova Atualização Disponível', 'Instale Agora', {
         duration: 4000
       }).onAction().subscribe(() => {
         update.activateUpdate().then(() => location.reload());
