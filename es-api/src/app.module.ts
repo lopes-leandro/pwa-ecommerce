@@ -8,8 +8,8 @@ import { ProductsModule } from './products/products.module';
   imports: [
     ConfigModule.forRoot({
       envFilePath: './.develop.env',
-      ignoreEnvFile: true,
-      isGlobal: true,
+      ignoreEnvFile: false,
+      isGlobal: false,
     }),
     ProductsModule],
   controllers: [AppController],
