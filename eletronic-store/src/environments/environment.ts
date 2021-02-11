@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/products'
+  //apiUrl: 'http://localhost:3000/products'
+  apiUrl: 'https://api-eletronic.herokuapp.com/products'
 };
 
 /*
