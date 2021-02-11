@@ -56,7 +56,7 @@ const matDesignModules = [
     BrowserAnimationsModule,
     LayoutModule,
     ...matDesignModules,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]

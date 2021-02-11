@@ -30,9 +30,9 @@ export class AppComponent implements OnInit {
     this.products$ = this.productsService.getProducts();
     this.cart$ = this.cartService.cart$.subscribe(cart => this.cart = cart);
     this.spinnerService.setSpinnerEnable(false);
-    
+
     update.available.subscribe(event => {
-      this.snackBar.open('Nova atualização disponível', 'Instale agora', {
+      this.snackBar.open('Nova atualização disponível', 'Instale Agora', {
         duration: 4000
       }).onAction().subscribe(() => {
         update.activateUpdate().then(() => location.reload());
