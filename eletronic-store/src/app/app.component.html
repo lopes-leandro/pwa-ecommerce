@@ -7,7 +7,7 @@
     </div>
     <div class="products">
         <mat-card class="product-card" *ngFor="let product of products$ | async; let i = index">
-            <img [src]="product.images[0]" width="250px" height="250px" [attr.alt]="product.name" mat-card-image>
+            <img [src]="product.images[0]" width="auto" height="auto" [attr.alt]="product.name" mat-card-image>
             <mat-card-content>
                 <mat-card-title>{{product.name}}</mat-card-title>
                 <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
